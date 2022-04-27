@@ -1,0 +1,64 @@
+roll,crate_type,has_range,absolute,low_range,high_range,value
+13,silver,0,1,,,Bottle of Wildsnake
+13,silver,0,2,,,Bottle of Second Best
+13,silver,0,3,,,Lho Sticks
+14,silver,1,,1,1,Dum Dum bullets
+14,silver,1,,2,3,choose Auto-Pistol Ammo
+14,silver,1,,4,6,choose Shotgun Ammo
+15,silver,1,,1,5,common weapon – pick a common weapon
+15,silver,1,,6,6,Rare – Pick a Rarity 8 or less close combat weapon
+21,silver,1,,1,1,center an Incendiary Charge on the loot crate and remove it
+21,silver,1,,2,5,add frag grenade to your stash
+21,silver,1,,6,6,add Incendiary Charges to your stash.
+23,silver,0,1,,,A dose of ‘Slaught
+23,silver,0,2,,,A dose of Ghast
+23,silver,0,3,,,Nudie Magazine! 2XP to the fighter
+24,silver,0,1,,,Drop rig
+24,silver,0,2,,,Respirator
+24,silver,0,3,,,Strip kit
+25,silver,1,,1,1,Reclaimed Autopistol
+25,silver,1,,2,3,stub gun
+25,silver,1,,4,5,autopistol
+25,silver,1,,6,6,Bolt Pistol
+31,silver,1,,1,1,Centre a Choke Gas Grenade on the loot crate and remove it
+31,silver,1,,2,5,add Smoke Grenades and Flares to your stash
+31,silver,1,,6,6,add Choke Gas Grenades to your stash
+32,silver,1,,1,2,A dose of Icrotic Slime
+32,silver,1,,3,4,A dose of Frenzon
+32,silver,1,,5,6,A Stimm-slug Stash
+33,silver,1,,1,3,Armoured undersuit
+33,silver,1,,4,6,Ablative overlay
+35,silver,1,,1,3,"Choose Autogun, Lasgun or Sawn-off Shotgun"
+35,silver,1,,4,6,Shotgun with Solid and Scatter
+36,silver,1,,1,2,Hazard suit
+36,silver,1,,3,4,Flak Armour
+36,silver,1,,5,6,Mesh Armour
+41,silver,1,,1,1,centre a Frag Grenade on the Loot Crate and remove it
+41,silver,1,,2,5,add Frag Grenades to your stash
+41,silver,1,,6,6,add Krak Grenades to your stash
+43,silver,1,,1,4,Gunshroud
+43,silver,1,,5,5,Telescopic sight
+43,silver,1,,6,6,Las Projector
+44,silver,1,,1,4,it attacks the Fighter and runs off (if it survives)
+44,silver,1,,5,6,add a Giant Rat to your stash
+46,silver,1,,1,3,Long Las
+46,silver,1,,4,6,Long rifle
+51,silver,1,,1,1,centre a Gunk Grenade on the loot crate and remove it
+51,silver,1,,2,4,add a Photon Flash Flare and Stun Grenades to your stash
+51,silver,1,,5,6,add Gunk Grenades to your stash.
+53,silver,0,1,,,Armoured Undersuit
+53,silver,0,2,,,Bio-booster
+53,silver,0,3,,,Web solvent
+54,silver,1,,1,1,Reclaimed Autopistol
+54,silver,1,,2,3,stub gun
+54,silver,1,,4,5,autopistol
+54,silver,1,,6,6,Plasma pistol
+55,silver,1,,1,4,Nudie Mags +1XP and +2 Rep
+55,silver,1,,5,6,Super dark Nudie Mags 6 XP to the fighter
+56,silver,0,1,,,Bionic Arm
+56,silver,0,2,,,Bionic Leg
+56,silver,0,3,,,Bionic eye
+61,silver,1,,1,1,The fighter is hit by a Krak Grenade and the Loot crate is removed
+61,silver,1,,2,6,Frag Trap is added to your stash
+65,silver,1,,1,5,common weapon – pick a common weapon
+65,silver,1,,6,6,Rare – Pick a Rarity 8 or less close combat weapon
