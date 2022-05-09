@@ -1,6 +1,6 @@
 from typing_extensions import Required
 import discord
-from discord.commands import OptionChoice
+from discord.commands import OptionChoice, SlashCommandGroup
 import os
 from insults import get_long_insult, get_short_insult
 
@@ -10,7 +10,9 @@ testing_servers=[809399376384229417]
 bot = discord.Bot(debug_guilds=testing_servers)
 
 cogs = [
-    'roll_dice'
+    'roll_dice',
+    'loot',
+    'advance'
 ]
 
 for cog in cogs:
@@ -66,39 +68,5 @@ opening_options = [
     OptionChoice(name="Smashed it like a big boi", value="smashed"),
     OptionChoice(name="Opened it like a smart cunt", value="opened")
 ]
-
-@bot.command()
-async def loot(ctx,
-    how_did_you_open_it: discord.Option(str, "How did you open the crate?", choices=opening_options)
-    ):
-    await ctx.respond(f"yo you {how_did_you_open_it} it")
-
-
-class MyView(discord.ui.View):
-    @discord.ui.select( # the decorator that lets you specify the properties of the select menu
-        placeholder = "Choose a Flavor!", # the placeholder text that will be displayed if nothing is selected
-        min_values = 1, # the minimum number of values that must be selected by the users
-        max_values = 1, # the maxmimum number of values that can be selected by the users
-        options = [ # the list of options from which users can choose, a required field
-            discord.SelectOption(
-                label="Vanilla",
-                description="Pick this if you like vanilla!"
-            ),
-            discord.SelectOption(
-                label="Chocolate",
-                description="Pick this if you like chocolate!"
-            ),
-            discord.SelectOption(
-                label="Strawberry",
-                description="Pick this if you like strawberry!"
-            )
-        ]
-    )
-    async def select_callback(self, select, interaction): # the function called when the user is done selecting options
-        await interaction.response.send_message(f"Awesome! I like {select.values[0]} too!")
-
-@bot.command()
-async def flavor(ctx):
-    await ctx.respond("Choose a flavor!", view=MyView())
 
 bot.run(TOKEN)
