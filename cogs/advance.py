@@ -12,7 +12,6 @@ import sys
 global roll
 global advancement_table
 second_roll = 0
-global options
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
@@ -21,6 +20,7 @@ from insults import get_long_insult
 regina_url = 'https://scontent.xx.fbcdn.net/v/t1.15752-9/278403172_399692048829552_6640220989778099445_n.jpg?stp=dst-jpg_s403x403&_nc_cat=101&ccb=1-5&_nc_sid=aee45a&_nc_ohc=fp1v8cyJAJwAX8OItsD&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJGPV02ajRAuuVrZxJxjwaIpQNKrbd1MTu_QNLywsnqsw&oe=6289995B'
 
 options = []
+options_d6 = []
 
 advancement_style = [
         OptionChoice(name="Advancing a Ganger", value="ganger"), #  Value must be a string.
@@ -39,6 +39,19 @@ while i >= -10:
         continue
     option = discord.SelectOption(label=f'Modify by {denominator}{i}', description=f"use {abs(i)} XP to modify roll", value=i)
     options.append(option)
+    i-=1
+
+i = 6
+denominator = '+'
+while i >= -6:
+    if i < 0:
+        denominator = ''
+    if i == 0:
+        options_d6.append(discord.SelectOption(label="Do Nothing",description="Use 0 Xp to Modify", value = 0))
+        i-=1
+        continue
+    option = discord.SelectOption(label=f'Modify by {denominator}{i}', description=f"use {abs(i)} XP to modify roll", value=i)
+    options_d6.append(option)
     i-=1
 
 
@@ -84,20 +97,20 @@ class MyView(discord.ui.View):
             select.disabled=True
             await interaction.response.edit_message(view=self)
 
-            await interaction.followup.send(f'nice choice your ganger has gained: {selected_option}')
+            await interaction.followup.send(f'Your ganger has gained: **{selected_option}**')
         
         #they didnt change the roll and can modify further
         else:
             select.disabled=True
-            await interaction.message.edit(f'Now you have selected to remain with {new_advancement_description} and have rolled a {second_roll}, you can modify this with xp if needed')
+            await interaction.message.edit(f'Now you have selected to remain with {new_advancement_description} and have rolled a **{second_roll}**, you can modify this with xp if needed')
             await interaction.response.edit_message(view=MySecondView())
 
 class MySecondView(discord.ui.View):
     @discord.ui.select( # the decorator that lets you specify the properties of the select menu
-        placeholder = "Modify Second Roll??", # the placeholder text that will be displayed if nothing is selected
+        placeholder = f"Modify Second Roll??", # the placeholder text that will be displayed if nothing is selected
         min_values = 1, # the minimum number of values that must be selected by the users
         max_values = 1, # the maxmimum number of values that can be selected by the users
-        options = options,
+        options = options_d6,
         disabled=False,
         row=0
     )
@@ -118,7 +131,7 @@ class MySecondView(discord.ui.View):
             selected_option = current_advancement['description'].values[0]
 
         await interaction.response.edit_message(view=self)
-        await interaction.message.reply(f'you got {selected_option}')
+        await interaction.message.reply(f'you got **{selected_option}**')
 
 class advance(commands.Cog): # create a class for our cog that inherits from commands.Cog
     # this class is used to create a cog, which is a module that can be added to the bot
@@ -154,11 +167,10 @@ class advance(commands.Cog): # create a class for our cog that inherits from com
         embed.set_thumbnail(url=regina_url)
         global roll
         roll=random.randint(2,12)
-
         current_advance = advancement_table.loc[advancement_table['roll'] == roll]['description'].values[0]
 
         await ctx.send("here is the advancement table:", embed=embed)
-        await ctx.send(f"You have rolled a {roll}, currently that means {current_advance}\r\n You can use XP to modify the roll",view=MyView(timeout=25))
+        await ctx.send(f"You have rolled a **{roll}**, currently that means {current_advance}\r\nYou can use XP to modify the roll",view=MyView(timeout=25))
     
 
 def setup(bot): # this is called by Pycord to setup the cog
