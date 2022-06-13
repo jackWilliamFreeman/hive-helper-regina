@@ -1,0 +1,37 @@
+roll,description,has_another_roll,dice_size,option_1,option_2,option_3,option_4,option_5,option_6
+11,"**Nothing!** The crate was a dud. The fighter is so mad they regain their ready marker as if they had not activated this turn. If the match is over, they simply shake their fist furiously. ",FALSE,,,,,,,
+12,**Ammo!**,TRUE,6,choose pistol ammo,choose 2 x Auto gun/pistol Ammo,choose 2 x Auto gun/pistol Ammo,choose 2 x Bolt/ Shotgun Ammo,choose 2 x Bolt/ Shotgun Ammo,Choose Grenade Launcher Ammo.
+13,Field Armor!**,TRUE,6,Refractor Field,Refractor Field,Refractor Field,Conversion Field,Conversion Field,Displacer Field
+14,**Close Combat Weapon cache!**,TRUE,6,pick a common melee  weapon and add it to your stash,pick a common melee  weapon and add it to your stash,pick a common melee  weapon and add it to your stash,Pick a Rarity 8 or less close combat weapon and add it to your stash,Pick a Rarity 8 or less close combat weapon and add it to your stash,Pick a Rarity 10 or less Close combat weapon and add it to your stash
+15,**Status Item!** ,TRUE,3,Gold Plated Gun,Opulent Jewellery,Pick a Servo Skull,,,
+16,**Bespoke weapon!**  Add a master crafted Boltgun or Combat shotgun with a free weapon attachment and ammo type to your stash. +1 Reputation.,FALSE,NA,,,,,,
+21,**Bombs!**,TRUE,6,add Blasting Charges to your stash,add Blasting Charges to your stash,add Blasting Charges to your stash,add Incendiary Charges to your stash.,add Incendiary Charges to your stash.,add Incendiary Charges to your stash.
+22,**Personal Equipment!**,TRUE,6,Drop rig,Filter plugs,Respirator,Strip kit,Skin blade (affects when they are looted not captured),stimm slug stash
+23,**Old Nudie or Tactic Magazines! **,TRUE,6,add +4XP and +2 Rep; ,add +4XP and +2 Rep; ,add +4XP and +2 Rep; ,add +4XP and +2 Rep; ,add +4XP and +2 Rep; ,gain a random secondary skill.
+24,**Forbidden magazine!** The fighter becomes and unsanctioned psyker and gains a wyrd skill of choice,FALSE,NA,,,,,,
+25,**Pistol cache!**,TRUE,6,Autopistol with manstoppers,Hand Flamer,Needle Pistol,Plasma Pistol,Web Pistol,Bolt Pistol
+26,**Imperial weapon! **,TRUE,6,phosphor cannister,lightning claw,Grav Gun,storm bolter,Thunder Hammer,arc rifle
+31,**Bombs!**,TRUE,6,add Smoke Grenades and Flares to your stash,add Choke Gas Grenades to your stash.,add Choke Gas Grenades to your stash.,add Choke Gas Grenades to your stash.,add Choke Gas Grenades to your stash.,add Choke Gas Grenades to your stash.
+32,**Mundane Bionics!**,TRUE,6,Bionic Arm,Bionic Arm,Bionic Leg,Bionic Leg,Bionic eye,Mnemonic Inload Spike
+33,**White dwarf issue 9999963636!**  Free advance and +1 Rep,FALSE,NA,,,,,,
+34,**Harnesses!**,TRUE,6,add a suspensor harness to your stash (melee weapon one),add a suspensor harness to your stash (melee weapon one),Add a Suspensor to your stash.,Add a Suspensor to your stash.,Add a servo harness (partial) to your stash,Add a servo harness (full) to your stash
+35,**Weapon cache Basic!**,TRUE,6,"Choose Autogun, Lasgun or Sawn-off Shotgun","Choose Autogun, Lasgun or Sawn-off Shotgun","Choose Autogun, Lasgun or Sawn-off Shotgun","Shotgun with Solid and Scatter, and either Inferno ammo or executioner ammo",Combat Shotgun,Boltgun
+36,**special Weapon Cache **,TRUE,6,Long rifle or Long Las,Flamer,Grenade Launcher (with Frag and Krak grenades),Needle Rifle,Plasma Gun,Meltagun
+41,**Bombs! **,TRUE,6,add Frag Grenades to your stash,add Krak Grenades to your stash,add Krak Grenades to your stash,add Krak Grenades to your stash,add Krak Grenades to your stash,add Krak Grenades to your stash
+42,**Armor!**,TRUE,6,Add 2 x Flak Armor to your stash,Add 2 x Flak Armor to your stash,Add 2x Mesh Armor to your stash,Add 2x Mesh Armor to your stash,Add  2x Layered Flak Armor to your stash,add 1 x Light Carapace Armor to your stash
+43,**Weapon accessories!**,TRUE,6,Add Gunshroud or Hotshot Laspack to your stash,Add Gunshroud or Hotshot Laspack to your stash,Add Gunshroud or Hotshot Laspack to your stash,Add a Mono-sight or Telescopic-Sight to your stash,Add a Mono-sight or Telescopic-Sight to your stash,Add a Las Projector or suspensor to your stash
+44,**Giant Rat!**,TRUE,6," it attacks the Fighter, add to stash if it doesnt kill you",add a Giant Rat to your stash,add a Giant Rat to your stash,add a Giant Rat to your stash,add a Giant Rat to your stash,add a Giant Rat to your stash
+45,**Chain Weapon cache!**,TRUE,6,Chainsword,Chainaxe,Butchers chain cleaver,Chain glaive, Heavy Chain Cleaver, select a chain weapon
+46,**Illegal weapons!**,TRUE,6,Warp and static rounds for a weapon,Shard grenade,Mindflect Shard,Whisperblade Knife,kroot long rifle,Warpstorm bolter
+51,**Booby Traps! **,TRUE,6,2 x Frag Traps are added to your stash,3 x Frag Traps are added to your stash,2 x Gas Traps are added to your stash,3 x Gas Traps are added to your stash,4 x Gas Traps are added to your stash,2 x Melta Trap are added to your stash
+52,**Personal Equipment!**,TRUE,6,Armoured Undersuit,Bio-booster,ablative overlay,Grapnel launcher,Industrial respirator,blind snake pouch
+53,**Personal Equipment!**,TRUE,6,Grav Chute,Grav Chute,Stinger Mould,Stinger Mould,Radcounter,Mnemonic Inload Spike
+54,**Power Weapon cache!**,TRUE,6,Knife,Axe,Maul, Pick,Sword,Hammer
+55,**Old Magazines!**,TRUE,6,Nudie Mags: add +6XP and +2 Rep,Nudie Mags: add +6XP and +2 Rep,Nudie Mags: add +6XP and +2 Rep,Nudie Mags: add +6XP and +2 Rep,Tactics mags: gain a random primary skill and 4XP.,Tactics mags: gain a random primary skill and 4XP.
+56,**Mundane Bionics!**,TRUE,6,randomise a bionic,choose any Bionic,choose any Bionic,choose any Bionic,choose any Bionic,choose any Bionic
+61,**Personal Equipment!**,TRUE,6,Add Photo-googles to your stash,Add Photo-googles to your stash,Add a Stinger Mould to your stash,Add a Stinger Mould to your stash, Add Halo device to your stash, Add threadneedle worms to your stash
+62,**Personal Equipment!**,TRUE,6, Blind Snake Pouch,Guilder Cartograph,Industrial respirator, Cameoline Cloak,Frenzon Collar,False Hood
+63,**Bombs!**,TRUE,6,add a Photon Flash Flare and Stun Grenades to your stash,add a demo charge to your stash.,add a demo charge to your stash.,add a demo charge to your stash.,add a demo charge to your stash.,add a demo charge to your stash.
+64,**Enlightenment!**,TRUE,6,This Fighter plus D3 others gain 6 XP each. ,This Fighter plus D3 others gain 6 XP each. ,This Fighter plus D3 others gain 6 XP each. ,This Fighter plus D3 others gain 6 XP each. ,"This Fighter plus D3 others gain 6 XP each.  he also becomes an unsanctioned psyker, gaining 1 wyrd power","This Fighter plus D3 others gain 6 XP each.  he also becomes an unsanctioned psyker, gaining 1 wyrd power"
+65,**HeavyWeapon Cache!**,TRUE,6,"Heavy Stubber, Heavy chain cleaver or Heavy Mining laser ","Heavy Stubber, Heavy chain cleaver or Heavy Mining laser ","Heavy Stubber, Heavy chain cleaver or Heavy Mining laser ","Heavy Bolter, Heavy rock drill or Heavy Flamer","Missile Launcher, Heavy Rock Saw or Lascannon","Multimelta, Heavy Rock Cutter or Plasma Cannon"
+66,**A great and wonderous item**,TRUE,3,Add a Malefic Artefact to your stash and make a free advance action,Add a Xenoculum Artefact to your stash and make a free advance action,Add an Archeotech Device to your stash and make a free advance action,,,

@@ -1,0 +1,37 @@
+roll,description,has_another_roll,dice_size,option_1,option_2,option_3,option_4,option_5,option_6
+11,*Boom!* The fighter that opens the Loot Crate must roll on the lasting Injuries chart.,FALSE,0,,,,,,
+12,*Guncase packed full of Shit!* add a  reclaimed autopistol to your stash,FALSE,0,,,,,,
+13,*Cool shit!*,TRUE,3,Bottle of Wildsnake,Bottle of Second Best,Lho Sticks ,,,
+14,*Ammo!*,TRUE,6,Dum Dum bullets,choose Auto-Pistol Ammo,choose Auto-Pistol Ammo,choose Shotgun Ammo,choose Shotgun Ammo,choose Shotgun Ammo
+15,*Melee Weapon cache!*,TRUE,6,pick a common melee weapon and add it to your stash,pick a common melee weapon and add it to your stash,pick a common melee weapon and add it to your stash,pick a common melee weapon and add it to your stash,pick a common melee weapon and add it to your stash,Pick a Rarity 8 or less close combat weapon
+16,*Nudie Magazines!* Add 2 xp to the fighter,FALSE,0,,,,,,
+21,*Bombs!*,TRUE,6,center an Incendiary Charge on the loot crate and remove it,add frag grenade to your stash,add frag grenade to your stash,add frag grenade to your stash,add frag grenade to your stash,add Incendiary Charges to your stash
+22,*Nothing!* You are so mad you reequip your ready marker!,FALSE,0,,,,,,
+23,*Drugs!*,TRUE,3,A dose of Slaught,A dose of Ghast,Nudie Magazine! 2XP to the fighter,,,
+24,*Personal Equipment!*,TRUE,3,Drop rig,Respirator,Strip kit,,,
+25,*Pistol cache!*,TRUE,6,Reclaimed Autopistol,stub gun,stub gun,autopistol,autopistol,Bolt Pistol
+26,*Nudie Magazines!* Add 3 xp to the fighter,FALSE,0,,,,,,
+31,*Bombs!*,TRUE,6,centre a Choke Gas Grenade on the loot crate and remove it,add Smoke Grenades and Flares to your stash, add Smoke Grenades and Flares to your stash,add Smoke Grenades and Flares to your stash,add Smoke Grenades and Flares to your stash,add Choke Gas Grenades to your stash.
+32,*Drugs!*,TRUE,6, A dose of Icrotic Slime, A dose of Icrotic Slime,dose of Frenzon,dose of Frenzon,A Stimm-slug Stash,A Stimm-slug Stash
+33,*Armourweaves!*,TRUE,2,armoured undersuit ,Ablative overlay,,,,
+34,*Nudie Magazines!*  Add 4xp to the fighter,FALSE,0,,,,,,
+35,*Weapon Cache (Basic)!*,TRUE,2,"Choose Autogun, Lasgun or Sawn-off ",Shotgun with Solid and Scatter,,,,
+36,*Armour!*,TRUE,3,Hazard suit,Flak Armour,Mesh Armour,,,
+41,*Bombs!*,TRUE,6,centre a Frag Grenade on the Loot Crate and remove it,add Frag Grenades to your stash,add Frag Grenades to your stash,add Frag Grenades to your stash,add Frag Grenades to your stash,add Krak Grenades to your stash
+42,*Chainsaw!*  Add a chainsaw to your stash,FALSE,0,,,,,,
+43,*Weapon accessories!*,TRUE,6,Gunshroud ,Gunshroud ,Gunshroud ,Gunshroud ,telescopic sight, Las Projector
+44,*Giant Rat!*,TRUE,6,it attacks the Fighter and runs off (if it survives),it attacks the Fighter and runs off (if it survives),it attacks the Fighter and runs off (if it survives),it attacks the Fighter and runs off (if it survives),add a Giant Rat to your stash,add a Giant Rat to your stash
+45,*Nudie Magazines!* add  5 XP to the fighter,FALSE,0,,,,,,
+46,*Weapon Cache (special)!*,TRUE,2,Long Las,Long rifle,,,,
+51,*Bombs!*,TRUE,6,centre a Gunk Grenade on the loot crate and remove it,add a Photon Flash Flare to your stash,add a Photon Flash Flare to your stash,add a Photon Flash Flare to your stash,add Gunk Grenade and photon flash flares to your stash.,add Gunk Grenade and photon flash flares to your stash.
+52,*Survival Equipment!*,TRUE,3, filter plugs,respirator,grapnel launcher,,,
+53,*Personal Equipment!*,TRUE,3,Armoured Undersuit,Bio-booster,Web solvent,,,
+54,*Pistol Weapon cache!*,TRUE,6, stub gun, stub gun,autopistol,autopistol,Bolt Pistol,Plasma Pistol
+55,*Old Magazines!*,TRUE,6, add 3XP and +1 Rep to the fighter, add 3XP and +1 Rep to the fighter, add 3XP and +1 Rep to the fighter, add 3XP and +1 Rep to the fighter,Add 6 XP to the fighter,Add 6 XP to the fighter
+56,*Mundane Bionics!*,TRUE,3,Bionic Arm, Bionic Leg,Bionic eye,,,
+61,*Booby Traps!*,TRUE,6,The fighter is hit by a Krak Grenade and the Loot crate is removed,A Frag Trap is added to your stash,A Frag Trap is added to your stash,A Frag Trap is added to your stash,A Frag Trap is added to your stash,A Frag Trap is added to your stash
+62,*Nudie Magazines!* Add +1 rep and 4 XP to the fighter,FALSE,0,,,,,,
+63,*Power Knife!* add a power knife to your stash,FALSE,0, ,,,,,
+64,*Enlightenment!* This Fighter plus D3 others gain 3 XP each. ,FALSE,0,,,,,,
+65,*Melee Weapon cache!*,TRUE,6,pick a common melee weapon and add it to your stash,pick a common melee weapon and add it to your stash,pick a common melee weapon and add it to your stash, Pick a Rarity 8 or less close combat weapon, Pick a Rarity 8 or less close combat weapon, Pick a Rarity 8 or less close combat weapon
+66,*White Dwarf #199190198717!* Add a random secondary skill to the fighter,FALSE,0,,,,,,

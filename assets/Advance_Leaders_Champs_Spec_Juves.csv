@@ -1,0 +1,13 @@
+roll,description,has_another_roll,dice_size,option_1,option_2,option_3,option_4,option_5,option_6
+1,**Shell shocked:** roll on the injury table,FALSE,NA,,,,,,
+2,**Gain a Random Secondary Skill** Value increases by +35 ,FALSE,NA,,,,,,
+3,**Gain a Random Primary Skill** Value increases by +20 ,FALSE,NA,,,,,,
+4,**Characteristic Increase: Wd or Attk**,TRUE,2,"advance +1 Wound, value increases by +45","Advance +1 Attack, Value increases by +45",,,,
+5,**Characteristic Increase: Str or T**,TRUE,2,"advance +1 Strength, value increases by +30","Advance +1 Toughness, Value increases by +30",,,,
+6,**Characteristic Increase:** advance +1 Leadership and +1 Cool. Value increases by +20 ,FALSE,NA,,,,,,
+7,**Characteristic Increase: WS or BS**,TRUE,2,"advance +1 Weapon Skill, value increases by +20","Advance +1 Blallistic Skill, Value increases by +20",,,,
+8,**Characteristic Increases:**advance  +1 Willpower and +1 Intelligence Value increases by +10 ,,,,,,,,
+9,**Characteristic Increase: Mov or Init**,TRUE,2,"advance +1 Movementl, value increases by +10","Advance +1 Initiative, Value increases by +10",,,,
+10,**Gain a custom Primary Skill** Value increases by +20 ,FALSE,,,,,,,
+11,**Gain a Random Secondary Skill** Value increases by +35 ,FALSE,,,,,,,
+12,"**Specialist:** Promoted to Champ. Gain a random skill from a Primary Skills. Value increases by +40",FALSE,,,,,,,
