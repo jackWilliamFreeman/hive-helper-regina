@@ -20,7 +20,6 @@ from insults import get_long_insult
 regina_url = 'https://scontent.xx.fbcdn.net/v/t1.15752-9/278403172_399692048829552_6640220989778099445_n.jpg?stp=dst-jpg_s403x403&_nc_cat=101&ccb=1-5&_nc_sid=aee45a&_nc_ohc=fp1v8cyJAJwAX8OItsD&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJGPV02ajRAuuVrZxJxjwaIpQNKrbd1MTu_QNLywsnqsw&oe=6289995B'
 
 options = []
-options_d6 = []
 
 advancement_style = [
         OptionChoice(name="Advancing a Ganger", value="ganger"), #  Value must be a string.
@@ -28,32 +27,18 @@ advancement_style = [
     ]
 
 
-i = 10
+i = 2
 denominator = '+'
-while i >= -10:
+while i >= -2:
     if i < 0:
         denominator = ''
     if i == 0:
-        options.append(discord.SelectOption(label="Do Nothing",description="Use 0 Xp to Modify", value = 0))
+        options.append(discord.SelectOption(label="Do Nothing",description="Do Not Modify", value = 0))
         i-=1
         continue
-    option = discord.SelectOption(label=f'Modify by {denominator}{i}', description=f"use {abs(i)} XP to modify roll", value=i)
+    option = discord.SelectOption(label=f'Modify by {denominator}{i}', description=f"use {abs(i * 5)} XP to modify roll", value=i)
     options.append(option)
     i-=1
-
-i = 6
-denominator = '+'
-while i >= -6:
-    if i < 0:
-        denominator = ''
-    if i == 0:
-        options_d6.append(discord.SelectOption(label="Do Nothing",description="Use 0 Xp to Modify", value = 0))
-        i-=1
-        continue
-    option = discord.SelectOption(label=f'Modify by {denominator}{i}', description=f"use {abs(i)} XP to modify roll", value=i)
-    options_d6.append(option)
-    i-=1
-
 
 class MyView(discord.ui.View):
     @discord.ui.select( # the decorator that lets you specify the properties of the select menu
@@ -81,7 +66,6 @@ class MyView(discord.ui.View):
         global second_roll
         if current_advancement['has_another_roll'].values[0]: 
                 dice_size = current_advancement['dice_size'].values[0]
-                #TODO MAKE THE DICE GLOBAL FOR REUSE AND MODIFICATION
                 second_roll = random.randint(1, dice_size)
                 if second_roll % 3 == 0:
                     mod_roll = 2
@@ -110,7 +94,7 @@ class MySecondView(discord.ui.View):
         placeholder = f"Modify Second Roll??", # the placeholder text that will be displayed if nothing is selected
         min_values = 1, # the minimum number of values that must be selected by the users
         max_values = 1, # the maxmimum number of values that can be selected by the users
-        options = options_d6,
+        options = options,
         disabled=False,
         row=0
     )
@@ -121,7 +105,7 @@ class MySecondView(discord.ui.View):
         global second_roll
         if selected_value != 0:
             second_roll = second_roll + int(selected_value)
-        if second_roll % 3 != 0:
+        if second_roll > 3:
             mod_roll = 2
         else:
             mod_roll = 1
