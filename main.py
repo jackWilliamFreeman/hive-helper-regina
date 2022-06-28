@@ -12,7 +12,8 @@ bot = discord.Bot(debug_guilds=testing_servers)
 cogs = [
     'roll_dice',
     'loot',
-    'advance'
+    'advance',
+    'injury'
 ]
 
 for cog in cogs:

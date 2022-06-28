@@ -1,0 +1,37 @@
+roll,description
+11,"*Lesson Learned:* The fighter goes into recovery, but gains D3 XP."
+12,*Impressive scars:* The fighter gains the �fearsome� skill
+13,*Out Cold:* No long term injuries.
+14,*Out Cold:* No long term injuries.
+15,*Out Cold:* No long term injuries.
+16,*Out Cold:* No long term injuries.
+21,*Out Cold:* No long term injuries.
+22,*Out Cold:* No long term injuries.
+23,*Out Cold:* No long term injuries.
+24,*Out Cold:* No long term injuries.
+25,*Out Cold:* No long term injuries.
+26,*Out Cold:* No long term injuries.
+31,*Grievous Injury:* Go Into Recovery.
+32,*Grievous Injury:* Go Into Recovery.
+33,*Grievous Injury:* Go Into Recovery.
+34,*Grievous Injury:* Go Into Recovery.
+35,*Grievous Injury:* Go Into Recovery.
+36,*Grievous Injury:* Go Into Recovery.
+41,*Grievous Injury:* Go Into Recovery.
+42,*Grievous Injury:* Go Into Recovery.
+43,*Grievous Injury:* Go Into Recovery.
+44,*Grievous Injury:* Go Into Recovery.
+45,*Grievous Injury:* Go Into Recovery.
+46,*Humiliated:* Go Into Recovery. -1 Cool and Leadership.
+51,*Head Injury:* Go Into Recovery. -1 Intelligence and Willpower.
+52,*Eye Injury:* Go Into Recovery. -1 Ballistic Skill.
+53,*Hand Injury:* Go Into Recovery. -1 Weapon Skill.
+54,*Hobbled:* Go Into Recovery. -1� Movement.
+55,*Spinal Injury:* Go Into Recovery. -1 Strength.
+56,*Enfeebled:* Go Into Recovery. -1 Toughness.
+61,*Critical Injury:* The fighter is in critical condition - dead if not treated by the Rogue Doc in the post-battle sequence.
+62,*Critical Injury:* The fighter is in critical condition - dead if not treated by the Rogue Doc in the post-battle sequence.
+63,*Critical Injury:* The fighter is in critical condition - dead if not treated by the Rogue Doc in the post-battle sequence.
+64,*Critical Injury:* The fighter is in critical condition - dead if not treated by the Rogue Doc in the post-battle sequence.
+65,*Critical Injury:* The fighter is in critical condition - dead if not treated by the Rogue Doc in the post-battle sequence.
+66,"*Memorable Death:* The fighter is killed instantly. If killed by an attack, the attacker gains +1 XP."
