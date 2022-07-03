@@ -13,7 +13,8 @@ cogs = [
     'roll_dice',
     'loot',
     'advance',
-    'injury'
+    'injury',
+    'get_gangs'
 ]
 
 for cog in cogs:
