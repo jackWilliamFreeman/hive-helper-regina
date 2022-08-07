@@ -27,7 +27,7 @@ jobs:
 
     - name: Download task definition
       run: |
-        aws ecs describe-task-definition --task-definition ${{ secrets.REPO_NAME }} --query taskDefinition > task-definition.json
+        aws ecs describe-task-definition --task-definition ${{ secrets.TASK_DF_NAME }} --query taskDefinition > task-definition.json
 
     - name: Build, tag, and push the image to Amazon ECR
       id: build-image
@@ -48,14 +48,14 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: task-definition.json
-        container-name: ${{ secrets.REPO_NAME }}
+        container-name: ${{ secrets.TASK_DF_NAME }}
         image: ${{ steps.build-image.outputs.image }}
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: ${{ secrets.REPO_NAME }}
+        service: ${{ secrets.TASK_DF_NAME }}
         cluster: ${{ secrets.CLUSTER_NAME }}
         wait-for-service-stability: true
 
