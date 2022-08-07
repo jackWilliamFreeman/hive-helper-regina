@@ -75,7 +75,7 @@ class loot(commands.Cog): # create a class for our cog that inherits from comman
 
 async def get_loot_results(roll, crate_type, ctx):
     try:
-        crate_file_rel = f'assets\{crate_type}_loot_crates.csv'
+        crate_file_rel = f'assets/{crate_type}_loot_crates.csv'
         crate_file = os.path.join(os.getcwd(),crate_file_rel)
         df = pd.read_csv(crate_file, encoding='cp1252')
         dice = 0
@@ -89,7 +89,7 @@ async def get_loot_results(roll, crate_type, ctx):
         rolled_result = loot_results(description,has_second_roll, dice, secondary_text)
         return rolled_result
     except Exception as e:
-        await ctx.respond(f'Somefink went wrong, you rolled a {roll} and if you had a second roll it was a {dice} (if it was a 0 there was no second roll needed), error message was {str(e)}')
+        await ctx.respond(f'Somefink went wrong {str(e)}')
 
 def setup(bot): # this is called by Pycord to setup the cog
     bot.add_cog(loot(bot)) # add the cog to the bot
