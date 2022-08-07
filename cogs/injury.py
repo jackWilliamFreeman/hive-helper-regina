@@ -19,7 +19,7 @@ class injury(commands.Cog): # create a class for our cog that inherits from comm
     def __init__(self, bot): # this is a special method that is called when the cog is loaded
         self.bot = bot
 
-    @commands.slash_command()
+    @commands.slash_command(description="injured a dude? Find out how bad...")
     # pycord will figure out the types for you
     async def injury(
     self,

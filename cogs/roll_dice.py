@@ -17,7 +17,7 @@ class roll_dice(commands.Cog): # create a class for our cog that inherits from c
     def __init__(self, bot): # this is a special method that is called when the cog is loaded
         self.bot = bot
 
-    @commands.slash_command()
+    @commands.slash_command(description="roll some dice")
     # pycord will figure out the types for you
     async def roll_dice(
     self,

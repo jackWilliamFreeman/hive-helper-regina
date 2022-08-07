@@ -39,7 +39,7 @@ class loot(commands.Cog): # create a class for our cog that inherits from comman
         OptionChoice(name="FUCKING SMASHED IT, YEH!", value="smashed") #  Value must be a string.
     ]
 
-    @commands.slash_command()
+    @commands.slash_command(description="get some rando loot")
     # pycord will figure out the types for you
     async def get_loot(
     self,
