@@ -59,14 +59,20 @@ class get_gangs(commands.Cog): # create a class for our cog that inherits from c
     async def get_gangs(
     self,
     ctx, 
-    gang_one: discord.Option(str, "What type of Crate was it?", choices=gang_choices)
+    gang_one: discord.Option(str, "Which Gang??", choices=gang_choices),
+    gang_two: discord.Option(str, "Which Gang??", choices=gang_choices)
         ):
         await ctx.defer()
-        gang = get_gang_list(gang_one)
-        chat = f'Gang at {gang_one} has folling members:'
-        for ganger in gang:
-            chat = chat + f'\r\nName {ganger.name} : Cost: {ganger.cost} : Hanger On?: {ganger.is_hanger_on} : In Recovery? : {ganger.in_recovery}'
-        await ctx.followup.send(chat)
+        try:
+            gang_one = get_gang_list(gang_one)
+            gang_two = get_gang_list(gang_two)
+            chat = f'Gang at {gang_one} has folling members:'
+            for ganger in gang_one:
+                chat = chat + f'\r\nName {ganger.name} : Cost: {ganger.cost} : Hanger On?: {ganger.is_hanger_on} : In Recovery? : {ganger.in_recovery}'
+            await ctx.followup.send(chat)
+        except Exception as e:
+            await ctx.followup.send(f'error: {e}')
+
     
 def get_gang_list(URL):
     page = requests.get(URL)

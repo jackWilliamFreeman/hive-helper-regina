@@ -1,13 +1,10 @@
-from typing_extensions import Required
 import discord
-from discord.commands import OptionChoice, SlashCommandGroup
 import os
-from insults import get_long_insult, get_short_insult
 
 TOKEN = os.getenv("TOKEN")
-testing_servers=[809399376384229417]
+#testing_servers=[809399376384229417]
 
-bot = discord.Bot(debug_guilds=testing_servers)
+bot = discord.Bot()
 
 cogs = [
     'roll_dice',
