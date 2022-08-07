@@ -1,4 +1,3 @@
-from turtle import title
 import discord
 from discord.ext import commands
 from discord.commands import OptionChoice
@@ -152,7 +151,7 @@ class advance(commands.Cog): # create a class for our cog that inherits from com
         global roll
         roll=random.randint(2,12)
         current_advance = advancement_table.loc[advancement_table['roll'] == roll]['description'].values[0]
-
+        await ctx.respond('See below for details')
         await ctx.send("here is the advancement table:", embed=embed)
         await ctx.send(f"You have rolled a **{roll}**, currently that means {current_advance}\r\nYou can use XP to modify the roll",view=MyView(timeout=25))
     
