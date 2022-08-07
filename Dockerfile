@@ -1,11 +1,10 @@
 FROM python:3
 
 # set a directory for the app
-WORKDIR /usr/src/app
+WORKDIR /app/
 
 # copy all the files to the container
 COPY . .
-COPY /assets/. .
 
 # install dependencies
 RUN pip install --upgrade pip
@@ -17,4 +16,4 @@ ENV AM_I_IN_A_DOCKER_CONTAINER Yes
 EXPOSE 5000
 
 # run the command
-CMD ["python", "./main.py"]
+CMD ["python", "main.py"]

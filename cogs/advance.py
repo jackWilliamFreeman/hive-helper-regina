@@ -133,9 +133,9 @@ class advance(commands.Cog): # create a class for our cog that inherits from com
         global gctx
         gctx = ctx
         if advancement_style == 'ganger':
-            advancement_file = 'assets\Advance_gangers.csv'
+            advancement_file = os.path.join(os.getcwd(),'assets/Advance_gangers.csv')
         else:
-            advancement_file = 'assets\Advance_Leaders_Champs_Spec_Juves.csv'
+            advancement_file = os.path.join(os.getcwd(),'assets\Advance_Leaders_Champs_Spec_Juves.csv')
         global advancement_table
         advancement_table = pd.read_csv(advancement_file)
 

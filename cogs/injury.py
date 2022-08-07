@@ -11,6 +11,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 global roll
 
+cwd = os.getcwd()
 from insults import get_long_insult, get_short_insult
 
 class injury(commands.Cog): # create a class for our cog that inherits from commands.Cog
@@ -29,8 +30,8 @@ class injury(commands.Cog): # create a class for our cog that inherits from comm
         ten_roll = random.randint(1, 6) * 10
         single_roll = random.randint(1, 6)
         roll = ten_roll+single_roll
-
-        injury_table = pd.read_csv('assets\injuries\Lasting_Injury_table.csv', encoding='cp1252')
+        final_loc = os.path.join(os.getcwd(), 'assets/injuries/Lasting_Injury_table.csv')
+        injury_table = pd.read_csv(final_loc, encoding='cp1252')
         rolled_injury = injury_table.loc[injury_table['roll'] == roll]
         injury_text = rolled_injury['description'].values[0]
 

@@ -2,7 +2,7 @@ import discord
 import os
 
 TOKEN = os.getenv("TOKEN")
-#testing_servers=[809399376384229417]
+testing_servers=[809399376384229417]
 
 bot = discord.Bot()
 
