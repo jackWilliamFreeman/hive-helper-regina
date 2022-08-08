@@ -21,24 +21,27 @@ class get_scenario(commands.Cog): # create a class for our cog that inherits fro
     gang_1: discord.Option(str,description="first gang"),
     gang_2: discord.Option(str,description="second gang")
     ):
-        
-        scenario = get_scenario_df()      
-        badland_scenario = get_badland_event()
-        traps = get_traps(scenario)
-        loot_crate = get_loot_crate(scenario)
-        monster = get_monster_roll(scenario)
-        local_juves = get_local_juves(scenario)
-        local_denizens = get_local_denizens(scenario)
-        hive_dwellers = get_hive_dwellers(scenario)
-        attacker = determine_attacker(gang_1, gang_2)
-        attacker_crew_method = scenario['attacker_crew_selection_method'].values[0]
-        defender_crew_method = scenario['defender_crew_selection_method'].values[0]
-        attacker_crew_size = get_crew_size(scenario, 'attacker')
-        defender_crew_size = get_crew_size(scenario, 'defender')
-        attacker_reinforcement = scenario['attacker_reinforcements'].values[0]
-        defender_reinforcement = scenario['defender_reinforcements'].values[0]
-        embed = get_embed(gang_1, gang_2, scenario, badland_scenario, traps, loot_crate, monster, local_juves, local_denizens, hive_dwellers, attacker, attacker_crew_method, defender_crew_method, attacker_crew_size, defender_crew_size, attacker_reinforcement, defender_reinforcement)
-        await ctx.respond("No You!", embed = embed)
+        try:
+            scenario = get_scenario_df()      
+            badland_scenario = get_badland_event()
+            traps = get_traps(scenario)
+            loot_crate = get_loot_crate(scenario)
+            monster = get_monster_roll(scenario)
+            local_juves = get_local_juves(scenario)
+            local_denizens = get_local_denizens(scenario)
+            hive_dwellers = get_hive_dwellers(scenario)
+            convoy = get_convoy(scenario)
+            attacker = determine_attacker(gang_1, gang_2)
+            attacker_crew_method = scenario['attacker_crew_selection_method'].values[0]
+            defender_crew_method = scenario['defender_crew_selection_method'].values[0]
+            attacker_crew_size = get_crew_size(scenario, 'attacker')
+            defender_crew_size = get_crew_size(scenario, 'defender')
+            attacker_reinforcement = scenario['attacker_reinforcements'].values[0]
+            defender_reinforcement = scenario['defender_reinforcements'].values[0]
+            embed = get_embed(gang_1, gang_2, scenario, badland_scenario, traps, loot_crate, monster, local_juves, local_denizens, hive_dwellers, convoy, attacker, attacker_crew_method, defender_crew_method, attacker_crew_size, defender_crew_size, attacker_reinforcement, defender_reinforcement)
+            await ctx.respond("No You!", embed = embed)
+        except Exception as e:
+            await ctx.respond(f'uh oh i got a brain problem, someone tell Jack, its {type(e)} {e}')
     
 def setup(bot): # this is called by Pycord to setup the cog
     bot.add_cog(get_scenario(bot)) # add the cog to the bot
@@ -127,7 +130,7 @@ def get_crew_size(scenario, context):
     else:
         return random.randint(1,crew_dice) + crew_mod
 
-def get_embed(gang_1, gang_2, scenario, badland_scenario, traps, loot_crate, monster, local_juves, local_denizens, hive_dwellers, attacker, attacker_crew_method, defender_crew_method, attacker_crew_size, defender_crew_size, attacker_reinforcement, defender_reinforcement):
+def get_embed(gang_1, gang_2, scenario, badland_scenario, traps, loot_crate, monster, local_juves, local_denizens, hive_dwellers, convoy, attacker, attacker_crew_method, defender_crew_method, attacker_crew_size, defender_crew_size, attacker_reinforcement, defender_reinforcement):
     embed = discord.Embed(
             title=f"{scenario['scenario_text'].values[0]}",
             description=f"Well, looks like we got ourself a good old scrap up between {gang_1} and {gang_2}. Turns out {attacker} is the attacker!",
@@ -148,6 +151,8 @@ def get_embed(gang_1, gang_2, scenario, badland_scenario, traps, loot_crate, mon
         embed.add_field(name="Local Denizens:", value=f"`{local_denizens}`", inline=inline)
     if hive_dwellers:
         embed.add_field(name="Hive Dwellers:", value=f"`{hive_dwellers}`", inline=inline)
+    if convoy:
+        embed.add_field(name="Convoy Details:", value=f"`{convoy}`", inline=inline)
     attacker_reinforcement_text = ''
     if attacker_reinforcement:
         attacker_reinforcement_text = " Plus Reinforcements"
