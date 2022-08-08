@@ -3,8 +3,6 @@ from discord.ext import commands
 from discord.commands import OptionChoice
 import random
 import pandas as pd
-
-
 import os
 import sys
 

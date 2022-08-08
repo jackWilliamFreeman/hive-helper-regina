@@ -12,7 +12,8 @@ cogs = [
     'advance',
     'injury',
     'get_gangs',
-    'no'
+    'no',
+    'scenario'
 ]
 
 for cog in cogs:

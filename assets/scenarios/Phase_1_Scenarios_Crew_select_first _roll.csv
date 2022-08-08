@@ -1,0 +1,21 @@
+roll,scenario_text,has_badzone_event,has_traps,has_loot_crate,has_monster_roll,has_local_juves,has_local_denizens,has_hive_dwellers,has_convoy,attacker_crew_selection_method,attacker_dice_crew_size,attacker_crew_modifier,attacker_reinforcements,defender_crew_selection_method,defender_dice_crew_size,defender_crew_modifier,defender_reinforcements
+1,*Monster Attack*,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,random,0,6,FALSE,random,0,6,FALSE
+2,*Crew ambush*,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,custom,0,7,FALSE,random,3,4,FALSE
+3,*In the Dark*,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,custom,0,6,FALSE,random,0,6,FALSE
+4,*Murder Cyborg*,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,custom,0,7,FALSE,custom,0,7,FALSE
+5,*Bridge Crossing*,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,custom,0,7,FALSE,custom,0,7,FALSE
+6,*Pawn Shop*,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,random,3,1,FALSE,random,3,1,FALSE
+7,*Escape the Badzone Storm*,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,random,0,7,FALSE,random,0,7,FALSE
+8,*Camp Border Dispute*,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,random,3,3,TRUE,random,3,3,TRUE
+9,*Escape the Pit*,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,random,0,6,FALSE,random,0,6,FALSE
+10,*Settlement Dustup*,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,random,0,6,FALSE,random,0,6,FALSE
+11,*Bridge Crossing*,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,custom,0,7,FALSE,custom,0,7,FALSE
+12,*Camp Border Dispute*,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,random,3,3,TRUE,random,3,3,TRUE
+13,*Mining Expedition*,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,custom,0,7,FALSE,custom,0,7,FALSE
+14,*Archeo Hunters*,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,custom,0,7,FALSE,custom,0,7,FALSE
+15,*Spire climb*,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,custom,0,7,FALSE,custom,0,7,FALSE
+16,*Ghast Harvest*,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,custom,0,7,FALSE,custom,0,7,FALSE
+17,*Escape the Pit*,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,random,0,6,FALSE,random,0,6,FALSE
+18,*Raid The convoy*,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,custom,0,7,FALSE,custom,0,7,FALSE
+19,*Big Score*,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,custom,0,7,FALSE,custom,0,7,FALSE
+20,*Crews select*,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,custom,0,7,FALSE,custom,0,7,FALSE

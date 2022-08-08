@@ -1,2 +1,2 @@
-roll,scenario_text,Carriages_dice_size,Carriages_modifier,Covoy_defenders_dice_size,Convoy_defenders_modifier
+roll,description,carriages_dice_size,carriages_modifier,convoy_defenders_dice_size,convoy_defenders_modifier
 1,*the convoy is made up of*,3,2,3,2

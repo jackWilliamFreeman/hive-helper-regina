@@ -18,4 +18,4 @@ roll,scenario_text,has_badzone_event,has_traps,has_Loot_crate_roll,has_monster_r
 17,*Recruitment Drive*,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,Custom,0,4,FALSE,Random,0,4,FALSE
 18,*Raid The convoy*,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,Custom,0,7,FALSE,Custom,0,7,FALSE
 19,*Big Score*,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Custom,0,7,FALSE,Custom,0,7,FALSE
-20,*Crews select*,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Custom,0,7,FALSE,Custom,0,7,FALSE
+20,*Radio Gaga or Crews select*,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,Custom,0,7,FALSE,Custom,0,7,FALSE
