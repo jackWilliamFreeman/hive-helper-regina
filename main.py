@@ -11,7 +11,8 @@ cogs = [
     'loot',
     'advance',
     'injury',
-    'get_gangs'
+    'get_gangs',
+    'no'
 ]
 
 for cog in cogs:
