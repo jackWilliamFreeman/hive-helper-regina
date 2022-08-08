@@ -3,6 +3,7 @@ from discord.ext import commands
 import discord
 import os
 import pandas as pd
+import traceback
 
 global cwd
 cwd = os.getcwd()
@@ -41,7 +42,7 @@ class get_scenario(commands.Cog): # create a class for our cog that inherits fro
             embed = get_embed(gang_1, gang_2, scenario, badland_scenario, traps, loot_crate, monster, local_juves, local_denizens, hive_dwellers, convoy, attacker, attacker_crew_method, defender_crew_method, attacker_crew_size, defender_crew_size, attacker_reinforcement, defender_reinforcement)
             await ctx.respond("No You!", embed = embed)
         except Exception as e:
-            await ctx.respond(f'uh oh i got a brain problem, someone tell Jack, its {type(e)} {e}')
+            await ctx.respond(f'uh oh i got a brain problem, someone tell Jack, its:\r\n\r\n{traceback.print_exc()}')
     
 def setup(bot): # this is called by Pycord to setup the cog
     bot.add_cog(get_scenario(bot)) # add the cog to the bot
@@ -134,7 +135,7 @@ def get_embed(gang_1, gang_2, scenario, badland_scenario, traps, loot_crate, mon
     embed = discord.Embed(
             title=f"{scenario['scenario_text'].values[0]}",
             description=f"Well, looks like we got ourself a good old scrap up between {gang_1} and {gang_2}. Turns out {attacker} is the attacker!",
-            color=discord.Colour.dark_gold(), # Pycord provides a class with default colors you can choose from
+            color=discord.Colour.dark_magenta(), # Pycord provides a class with default colors you can choose from
         )
     inline = False
     if badland_scenario:
@@ -161,8 +162,6 @@ def get_embed(gang_1, gang_2, scenario, badland_scenario, traps, loot_crate, mon
         defender_reinforcement_text = " Plus Reinforcements"
     embed.add_field(name="Attacker Crew Details:", value=f"Attacker gets {attacker_crew_size} {attacker_crew_method} gangers!{attacker_reinforcement_text}", inline=inline)
     embed.add_field(name="Defender Crew Details:", value=f"Defender gets {defender_crew_size} {defender_crew_method} gangers!{defender_reinforcement_text}", inline=inline)
-    embed.set_thumbnail(url="https://scontent.xx.fbcdn.net/v/t1.15752-9/278403172_399692048829552_6640220989778099445_n.jpg?stp=dst-jpg_s403x403&_nc_cat=101&ccb=1-5&_nc_sid=aee45a&_nc_ohc=fp1v8cyJAJwAX8OItsD&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJGPV02ajRAuuVrZxJxjwaIpQNKrbd1MTu_QNLywsnqsw&oe=6289995B")
-    embed.set_author(name="Hive Helper Regina", icon_url="https://scontent.xx.fbcdn.net/v/t1.15752-9/278403172_399692048829552_6640220989778099445_n.jpg?stp=dst-jpg_s403x403&_nc_cat=101&ccb=1-5&_nc_sid=aee45a&_nc_ohc=fp1v8cyJAJwAX8OItsD&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJGPV02ajRAuuVrZxJxjwaIpQNKrbd1MTu_QNLywsnqsw&oe=6289995B")
     return embed
 
 def get_simple_df_content(address, dice):
