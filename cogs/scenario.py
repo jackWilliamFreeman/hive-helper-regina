@@ -40,7 +40,7 @@ class get_scenario(commands.Cog): # create a class for our cog that inherits fro
             attacker_reinforcement = scenario['attacker_reinforcements'].values[0]
             defender_reinforcement = scenario['defender_reinforcements'].values[0]
             embed = get_embed(gang_1, gang_2, scenario, badland_scenario, traps, loot_crate, monster, local_juves, local_denizens, hive_dwellers, convoy, attacker, attacker_crew_method, defender_crew_method, attacker_crew_size, defender_crew_size, attacker_reinforcement, defender_reinforcement)
-            await ctx.respond("No You!", embed = embed)
+            await ctx.respond(f"Listen up {gang_1} and {gang_2}, your scenario details are below:", embed = embed)
         except Exception as e:
             await ctx.respond(f'uh oh i got a brain problem, someone tell Jack, its:\r\n\r\n{traceback.print_exc()}')
     
