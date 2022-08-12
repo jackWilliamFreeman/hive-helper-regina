@@ -4,9 +4,40 @@ import discord
 import os
 import pandas as pd
 import traceback
+from annoy_brad_logic import annoy_brad
+import requests
+import bs4
+from bs4 import BeautifulSoup
+from discord.commands import OptionChoice
+
+CAMPAIGN_URL = "https://yaktribe.games/underhive/campaign/hive_hustle_outcast_campaign.11244/"
 
 global cwd
 cwd = os.getcwd()
+
+def get_gangs(URL):
+    page = requests.get(URL)
+
+    soup = BeautifulSoup(page.content, 'html.parser')
+
+    gangs = {}
+
+    for element in soup.find_all('div', class_ ='col mb-4'):
+        for section in element:
+            if isinstance(section, bs4.element.NavigableString) and not section.isspace():
+        #ganger_name
+                gang_name = section
+        url = element.find('a', href=True)
+        url_text = f'https://yaktribe.games/{url["href"]}'
+        gangs[url.text] = url_text
+    return gangs
+
+gangs = get_gangs(CAMPAIGN_URL)
+
+gang_choices = []
+
+for gang in gangs:
+    gang_choices.append(OptionChoice(name=f'{gang}', value=f'{gangs[gang]}'))
 
 class get_scenario(commands.Cog): # create a class for our cog that inherits from commands.Cog
     # this class is used to create a cog, which is a module that can be added to the bot
@@ -19,8 +50,8 @@ class get_scenario(commands.Cog): # create a class for our cog that inherits fro
     async def get_scenario(
     self,
     ctx,
-    gang_1: discord.Option(str,description="first gang"),
-    gang_2: discord.Option(str,description="second gang")
+    first_gang: discord.Option(str, "Which Gang??", choices=gang_choices),
+    second_gang: discord.Option(str, "Which Gang??", choices=gang_choices)
     ):
         try:
             scenario = get_scenario_df()      
@@ -32,15 +63,18 @@ class get_scenario(commands.Cog): # create a class for our cog that inherits fro
             local_denizens = get_local_denizens(scenario)
             hive_dwellers = get_hive_dwellers(scenario)
             convoy = get_convoy(scenario)
-            attacker = determine_attacker(gang_1, gang_2)
+            attacker = determine_attacker(first_gang, second_gang)
             attacker_crew_method = scenario['attacker_crew_selection_method'].values[0]
             defender_crew_method = scenario['defender_crew_selection_method'].values[0]
             attacker_crew_size = get_crew_size(scenario, 'attacker')
             defender_crew_size = get_crew_size(scenario, 'defender')
             attacker_reinforcement = scenario['attacker_reinforcements'].values[0]
             defender_reinforcement = scenario['defender_reinforcements'].values[0]
-            embed = get_embed(gang_1, gang_2, scenario, badland_scenario, traps, loot_crate, monster, local_juves, local_denizens, hive_dwellers, convoy, attacker, attacker_crew_method, defender_crew_method, attacker_crew_size, defender_crew_size, attacker_reinforcement, defender_reinforcement)
-            await ctx.respond(f"Listen up {gang_1} and {gang_2}, your scenario details are below:", embed = embed)
+            embed = get_embed(first_gang, second_gang, scenario, badland_scenario, traps, loot_crate, monster, local_juves, local_denizens, hive_dwellers, convoy, attacker, attacker_crew_method, defender_crew_method, attacker_crew_size, defender_crew_size, attacker_reinforcement, defender_reinforcement)
+            
+            brad =  await annoy_brad(ctx)
+            if not brad:
+                await ctx.respond(f"Listen up {first_gang} and {second_gang}, your scenario details are below:", embed = embed)
         except Exception as e:
             await ctx.respond(f'uh oh i got a brain problem, someone tell Jack, its:\r\n\r\n{traceback.print_exc()}')
     
@@ -116,12 +150,12 @@ def get_convoy(scenario):
         return f"The convoy consists of {defenders} defenders and {carriages} carriages"
     else: return
 
-def determine_attacker(gang_1, gang_2):
+def determine_attacker(first_gang, second_gang):
     roll1 = random.randint(1,40000)
     roll2 = random.randint(1,40000)
     if roll1 > roll2:
-        return gang_1
-    else: return gang_2
+        return first_gang
+    else: return second_gang
 
 def get_crew_size(scenario, context):
     crew_dice = scenario[f'{context}_dice_crew_size'].values[0]
@@ -131,10 +165,10 @@ def get_crew_size(scenario, context):
     else:
         return random.randint(1,crew_dice) + crew_mod
 
-def get_embed(gang_1, gang_2, scenario, badland_scenario, traps, loot_crate, monster, local_juves, local_denizens, hive_dwellers, convoy, attacker, attacker_crew_method, defender_crew_method, attacker_crew_size, defender_crew_size, attacker_reinforcement, defender_reinforcement):
+def get_embed(first_gang, second_gang, scenario, badland_scenario, traps, loot_crate, monster, local_juves, local_denizens, hive_dwellers, convoy, attacker, attacker_crew_method, defender_crew_method, attacker_crew_size, defender_crew_size, attacker_reinforcement, defender_reinforcement):
     embed = discord.Embed(
             title=f"{scenario['scenario_text'].values[0]}",
-            description=f"Well, looks like we got ourself a good old scrap up between {gang_1} and {gang_2}. Turns out {attacker} is the attacker!",
+            description=f"Well, looks like we got ourself a good old scrap up between {first_gang} and {second_gang}. Turns out {attacker} is the attacker!",
             color=discord.Colour.dark_magenta(), # Pycord provides a class with default colors you can choose from
         )
     inline = False

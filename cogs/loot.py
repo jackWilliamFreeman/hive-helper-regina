@@ -5,6 +5,7 @@ import random
 import pandas as pd
 import os
 import sys
+from annoy_brad_logic import annoy_brad
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
@@ -66,7 +67,10 @@ class loot(commands.Cog): # create a class for our cog that inherits from comman
         embed.set_author(name="Hive Helper Regina", icon_url=regina_url)
         embed.set_thumbnail(url=regina_url)
         embed.set_image(url="https://i.pinimg.com/736x/33/43/6e/33436ed730d351a6278d9fd2940af70d--warhammer-k-weapons.jpg")
-        await ctx.respond(embed=embed)
+        brad =  await annoy_brad(ctx)
+        if not brad:
+            await ctx.respond(embed=embed)
+
 
 
 

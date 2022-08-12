@@ -3,6 +3,7 @@ from discord.ext import commands
 import random
 from insults import get_long_insult
 import pandas as pd
+from annoy_brad_logic import annoy_brad
 
 import os
 import sys
@@ -43,8 +44,9 @@ class injury(commands.Cog): # create a class for our cog that inherits from comm
         embed.add_field(name="Injury:", value=f"`{injury_text}`", inline=False)
         embed.set_thumbnail(url="https://scontent.xx.fbcdn.net/v/t1.15752-9/278403172_399692048829552_6640220989778099445_n.jpg?stp=dst-jpg_s403x403&_nc_cat=101&ccb=1-5&_nc_sid=aee45a&_nc_ohc=fp1v8cyJAJwAX8OItsD&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJGPV02ajRAuuVrZxJxjwaIpQNKrbd1MTu_QNLywsnqsw&oe=6289995B")
         embed.set_author(name="Hive Helper Regina", icon_url="https://scontent.xx.fbcdn.net/v/t1.15752-9/278403172_399692048829552_6640220989778099445_n.jpg?stp=dst-jpg_s403x403&_nc_cat=101&ccb=1-5&_nc_sid=aee45a&_nc_ohc=fp1v8cyJAJwAX8OItsD&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJGPV02ajRAuuVrZxJxjwaIpQNKrbd1MTu_QNLywsnqsw&oe=6289995B")
-
-        await ctx.respond(embed=embed)
+        brad =  await annoy_brad(ctx)
+        if not brad:
+            await ctx.respond(embed=embed)
     
 def setup(bot): # this is called by Pycord to setup the cog
     bot.add_cog(injury(bot)) # add the cog to the bot

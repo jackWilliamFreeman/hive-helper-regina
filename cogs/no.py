@@ -1,8 +1,7 @@
-from importlib.metadata import files
-from operator import truediv
 from discord.ext import commands
 import discord
 import os
+from annoy_brad_logic import annoy_brad
 
 class no(commands.Cog): # create a class for our cog that inherits from commands.Cog
     # this class is used to create a cog, which is a module that can be added to the bot
@@ -26,8 +25,3 @@ class no(commands.Cog): # create a class for our cog that inherits from commands
 def setup(bot): # this is called by Pycord to setup the cog
     bot.add_cog(no(bot)) # add the cog to the bot
 
-async def annoy_brad(ctx):
-    if ctx.author.id == 639967800106024983:
-            await ctx.respond("Fuck off Brad")
-            return True
-    else: return False
