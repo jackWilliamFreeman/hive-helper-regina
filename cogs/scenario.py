@@ -37,7 +37,7 @@ gangs = get_gangs(CAMPAIGN_URL)
 gang_choices = []
 
 for gang in gangs:
-    gang_choices.append(OptionChoice(name=f'{gang}', value=f'{gangs[gang]}'))
+    gang_choices.append(OptionChoice(name=f'{gang}', value=f'{gang}'))
 
 class get_scenario(commands.Cog): # create a class for our cog that inherits from commands.Cog
     # this class is used to create a cog, which is a module that can be added to the bot
@@ -76,7 +76,7 @@ class get_scenario(commands.Cog): # create a class for our cog that inherits fro
             if not brad:
                 await ctx.respond(f"Listen up {first_gang} and {second_gang}, your scenario details are below:", embed = embed)
         except Exception as e:
-            await ctx.respond(f'uh oh i got a brain problem, someone tell Jack, its:\r\n\r\n{traceback.print_exc()}')
+            await ctx.respond(f'uh oh i got a brain problem, someone tell Jack, its:\r\n\r\n{e}{traceback.print_exc()}')
     
 def setup(bot): # this is called by Pycord to setup the cog
     bot.add_cog(get_scenario(bot)) # add the cog to the bot
@@ -168,7 +168,7 @@ def get_crew_size(scenario, context):
 def get_embed(first_gang, second_gang, scenario, badland_scenario, traps, loot_crate, monster, local_juves, local_denizens, hive_dwellers, convoy, attacker, attacker_crew_method, defender_crew_method, attacker_crew_size, defender_crew_size, attacker_reinforcement, defender_reinforcement):
     embed = discord.Embed(
             title=f"{scenario['scenario_text'].values[0]}",
-            description=f"Well, looks like we got ourself a good old scrap up between {first_gang} and {second_gang}. Turns out {attacker} is the attacker!",
+            description=f"Well, looks like we got ourself a good old scrap up between **{first_gang}** and **{second_gang}**. Turns out **{attacker}** is the attacker!",
             color=discord.Colour.dark_magenta(), # Pycord provides a class with default colors you can choose from
         )
     inline = False
@@ -196,6 +196,7 @@ def get_embed(first_gang, second_gang, scenario, badland_scenario, traps, loot_c
         defender_reinforcement_text = " Plus Reinforcements"
     embed.add_field(name="Attacker Crew Details:", value=f"Attacker gets {attacker_crew_size} {attacker_crew_method} gangers!{attacker_reinforcement_text}", inline=inline)
     embed.add_field(name="Defender Crew Details:", value=f"Defender gets {defender_crew_size} {defender_crew_method} gangers!{defender_reinforcement_text}", inline=inline)
+    embed.add_field(name="Gang URLS are as follows:", value=f"{first_gang} : {gangs.get(first_gang)}\r\n{second_gang}: {gangs.get(second_gang)}")
     return embed
 
 def get_simple_df_content(address, dice):
