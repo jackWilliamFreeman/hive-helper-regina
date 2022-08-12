@@ -196,7 +196,7 @@ def get_embed(first_gang, second_gang, scenario, badland_scenario, traps, loot_c
         defender_reinforcement_text = " Plus Reinforcements"
     embed.add_field(name="Attacker Crew Details:", value=f"Attacker gets {attacker_crew_size} {attacker_crew_method} gangers!{attacker_reinforcement_text}", inline=inline)
     embed.add_field(name="Defender Crew Details:", value=f"Defender gets {defender_crew_size} {defender_crew_method} gangers!{defender_reinforcement_text}", inline=inline)
-    embed.add_field(name="Gang URLS are as follows:", value=f"{first_gang} : {gangs.get(first_gang)}\r\n{second_gang}: {gangs.get(second_gang)}")
+    embed.add_field(name="Gang URLS are as follows:", value=f"{first_gang}:\r\n{gangs.get(first_gang)}\r\n{second_gang}:\r\n{gangs.get(second_gang)}")
     return embed
 
 def get_simple_df_content(address, dice):
