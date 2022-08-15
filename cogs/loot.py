@@ -77,7 +77,7 @@ class loot(commands.Cog): # create a class for our cog that inherits from comman
 
 async def get_loot_results(roll, crate_type, ctx):
     try:
-        crate_file_rel = f'assets/{crate_type}_loot_crates.csv'
+        crate_file_rel = f'assets/loot/{crate_type}_loot_crates.csv'
         crate_file = os.path.join(os.getcwd(),crate_file_rel)
         df = pd.read_csv(crate_file, encoding='cp1252')
         dice = 0

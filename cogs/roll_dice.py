@@ -25,7 +25,7 @@ class roll_dice(commands.Cog): # create a class for our cog that inherits from c
     number_of_dice: discord.Option(int, max_value= 99,
     description="the number of dice you want to roll"), 
     dice_size: discord.Option(int,description="the number of sides to the dice"), 
-    is_distinct: discord.Option(bool, description="Do you want this set of dice to be distinct?")
+    is_distinct: discord.Option(bool, description="Do you want this set of dice to be distinct?", default=False, required=False)
     ):
 
         if (number_of_dice > dice_size) & is_distinct:
