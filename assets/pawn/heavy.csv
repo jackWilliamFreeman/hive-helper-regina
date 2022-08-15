@@ -1,0 +1,7 @@
+roll,description,has_another_roll,dice_size,option_1,option_2,option_3,option_4,option_5,option_6
+1,No decent heavy weapons,FALSE,,,,,,,
+2,No decent heavy weapons,FALSE,,,,,,,
+3,No decent heavy weapons,FALSE,,,,,,,
+4,No decent heavy weapons,TRUE,6,Stubber,Stubber,Stubber,Stubber,Stubber,Mining Laser
+5,a decent heavy,TRUE,6,Stubber,Stubber,Stubber,Stubber,Stubber,Mining Laser
+6,a decent heavy,TRUE,6,Stubber,Stubber,Stubber,Stubber,Stubber,Mining Laser

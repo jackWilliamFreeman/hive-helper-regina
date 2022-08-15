@@ -1,10 +1,16 @@
 import boto3
 BRAD_ID = 639967800106024983
 TABLE_NAME = 'appData'
+import os
+
+KEY = os.environ.get('AM_I_IN_A_DOCKER_CONTAINER', False)
+
+if KEY: 
+    session = boto3.Session()
+else:
+    session = boto3.Session(profile_name='default')
 
 
-session = boto3.Session()
-#session = boto3.Session(profile_name='default')
 dynamodb = session.resource('dynamodb', region_name="ap-southeast-2")
 table = dynamodb.Table(TABLE_NAME)
 tables = list(dynamodb.tables.all())

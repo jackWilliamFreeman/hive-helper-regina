@@ -20,7 +20,7 @@ class get_bounty_hunters(commands.Cog): # create a class for our cog that inheri
     def __init__(self, bot): # this is a special method that is called when the cog is loaded
         self.bot = bot
 
-    @commands.slash_command(description="get your own hunter of bounties!")
+    @commands.slash_command(description="get your own hunter of bounties!", name='bounty_hunter')
     # pycord will figure out the types for you
     async def get_bounty_hunters(
     self,

@@ -1,0 +1,7 @@
+roll,description,has_another_roll,dice_size,option_1,option_2,option_3,option_4,option_5,option_6
+1,No decent melee weapons,FALSE,,,,,,,
+2,No decent melee weapons,FALSE,,,,,,,
+3,No decent melee weapons,FALSE,,,,,,,
+4,A decent,TRUE,6,Chain glaive,Boning Sword,Butchers chain cleaver,Power Axe,Power Hammer,Power Hammer
+5,A decent,TRUE,6,Chain glaive,Boning Sword,Butchers chain cleaver,Power Axe,Power Hammer,Power Hammer
+6,A decent,TRUE,6,Chain glaive,Boning Sword,Butchers chain cleaver,Power Axe,Power Hammer,Power Hammer

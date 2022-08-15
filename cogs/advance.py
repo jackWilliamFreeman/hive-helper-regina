@@ -122,7 +122,7 @@ class advance(commands.Cog): # create a class for our cog that inherits from com
     def __init__(self, bot): # this is a special method that is called when the cog is loaded
         self.bot = bot
 
-    @commands.slash_command(description="advance one of your gangers")
+    @commands.slash_command(description="advance one of your gangers", name='advance')
     # pycord will figure out the types for you
     async def advance(
     self,

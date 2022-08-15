@@ -45,13 +45,13 @@ class get_scenario(commands.Cog): # create a class for our cog that inherits fro
     def __init__(self, bot): # this is a special method that is called when the cog is loaded
         self.bot = bot
 
-    @commands.slash_command(description="say no to someone")
+    @commands.slash_command(description="say no to someone", name='scenario')
     # pycord will figure out the types for you
     async def get_scenario(
     self,
     ctx,
     first_gang: discord.Option(str, "Which Gang??", choices=gang_choices),
-    second_gang: discord.Option(str, "Which Gang??", choices=gang_choices)
+    second_gang: discord.Option(str, "Which Gang??", choices=gang_choices),
     ):
         try:
             scenario = get_scenario_df()      

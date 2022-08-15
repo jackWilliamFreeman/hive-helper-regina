@@ -14,7 +14,9 @@ cogs = [
     'scenario',
     'annoy_brad',
     'respond',
-    'get_bounty_hunters'
+    'get_bounty_hunters',
+    'help',
+    'pawn'
 ]
 
 for cog in cogs:
