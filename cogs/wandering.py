@@ -59,7 +59,7 @@ def get_items(df, rolls):
 
 def get_embed(items):
     embed = discord.Embed(
-            title="Pawn Shop Items",
+            title="Oh Shit, Wandering Trader!",
             description=f"Lets see what you got you **{get_long_insult()}**",
             color=discord.Colour.nitro_pink(), # Pycord provides a class with default colors you can choose from
         )
