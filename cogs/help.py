@@ -32,6 +32,8 @@ class help(commands.Cog): # create a class for our cog that inherits from comman
         embed.add_field(name="Advance", value=f"Advance a ganger", inline=False)
         embed.add_field(name="Scenario", value=f"Get a random scenario", inline=False)
         embed.add_field(name="Roll", value=f"Roll some magic dice", inline=False)
+        embed.add_field(name="Pawn", value=f"Visit the pawn shop, not Porn shop you {get_long_insult()}", inline=False)
+        embed.add_field(name="wandering", value=f"See what the wandering trader has to offer", inline=False)
 
         embed.set_thumbnail(url="https://scontent.xx.fbcdn.net/v/t1.15752-9/278403172_399692048829552_6640220989778099445_n.jpg?stp=dst-jpg_s403x403&_nc_cat=101&ccb=1-5&_nc_sid=aee45a&_nc_ohc=fp1v8cyJAJwAX8OItsD&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJGPV02ajRAuuVrZxJxjwaIpQNKrbd1MTu_QNLywsnqsw&oe=6289995B")
         embed.set_author(name="Hive Helper Regina", icon_url="https://scontent.xx.fbcdn.net/v/t1.15752-9/278403172_399692048829552_6640220989778099445_n.jpg?stp=dst-jpg_s403x403&_nc_cat=101&ccb=1-5&_nc_sid=aee45a&_nc_ohc=fp1v8cyJAJwAX8OItsD&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJGPV02ajRAuuVrZxJxjwaIpQNKrbd1MTu_QNLywsnqsw&oe=6289995B") 
