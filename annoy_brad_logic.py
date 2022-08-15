@@ -3,8 +3,8 @@ BRAD_ID = 639967800106024983
 TABLE_NAME = 'appData'
 
 
-#session = boto3.Session()
-session = boto3.Session(profile_name='default')
+session = boto3.Session()
+#session = boto3.Session(profile_name='default')
 dynamodb = session.resource('dynamodb', region_name="ap-southeast-2")
 table = dynamodb.Table(TABLE_NAME)
 tables = list(dynamodb.tables.all())
