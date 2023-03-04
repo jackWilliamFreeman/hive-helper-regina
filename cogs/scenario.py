@@ -10,7 +10,7 @@ import bs4
 from bs4 import BeautifulSoup
 from discord.commands import OptionChoice
 
-CAMPAIGN_URL = "https://yaktribe.games/underhive/campaign/hive_hustle_outcast_campaign.11244/"
+CAMPAIGN_URL = "https://yaktribe.games/underhive/campaigns/into_the_unknown.12240/"
 
 global cwd
 cwd = os.getcwd()
@@ -50,8 +50,8 @@ class get_scenario(commands.Cog): # create a class for our cog that inherits fro
     async def get_scenario(
     self,
     ctx,
-    first_gang: discord.Option(str, "Which Gang??", choices=gang_choices),
-    second_gang: discord.Option(str, "Which Gang??", choices=gang_choices),
+    first_gang: discord.Option(str, "First Opponent??"),
+    second_gang: discord.Option(str, "Second Opponent??"),
     ):
         try:
             scenario = get_scenario_df()      
@@ -196,7 +196,6 @@ def get_embed(first_gang, second_gang, scenario, badland_scenario, traps, loot_c
         defender_reinforcement_text = " Plus Reinforcements"
     embed.add_field(name="Attacker Crew Details:", value=f"Attacker gets {attacker_crew_size} {attacker_crew_method} gangers!{attacker_reinforcement_text}", inline=inline)
     embed.add_field(name="Defender Crew Details:", value=f"Defender gets {defender_crew_size} {defender_crew_method} gangers!{defender_reinforcement_text}", inline=inline)
-    embed.add_field(name="Gang URLS are as follows:", value=f"{first_gang}:\r\n{gangs.get(first_gang)}\r\n{second_gang}:\r\n{gangs.get(second_gang)}")
     return embed
 
 def get_simple_df_content(address, dice):
